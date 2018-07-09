@@ -29,10 +29,15 @@ public class Request {
         }
         String requestContent = sb.toString();
         int index1 = requestContent.indexOf(" ");
-        int index2 = requestContent.indexOf(" ", index1 + 1);
-        this.uri = requestContent.substring(index1 + 1, index2);
-        System.out.println(uri);
-        return this.uri;
+        if (index1!=-1){
+            int index2 = requestContent.indexOf(" ", index1 + 1);
+            if (index1<index2){
+                this.uri = requestContent.substring(index1 + 1, index2);
+                System.out.println(uri);
+                return this.uri;
+            }
+        }
+        return null;
     }
 
 

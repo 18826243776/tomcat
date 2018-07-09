@@ -25,6 +25,7 @@ public class HttpServer {
             // 增加一个自动回复
             OutputStream os = socket.getOutputStream();// 添加一个客户端输出
             Response response = new Response(os,request);
+            response.setStaticResource();
 
             is.close();
             os.close();
