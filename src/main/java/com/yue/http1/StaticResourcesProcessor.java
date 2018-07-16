@@ -4,11 +4,12 @@ import java.io.IOException;
 
 public class StaticResourcesProcessor {
 
-    public void process(Request request,Response response){
+    public void process(Request1 request1, Response1 response1){
         try{
-            response.setStaticResource();
+            response1.setStaticResource();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }

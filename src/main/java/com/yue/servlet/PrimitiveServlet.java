@@ -1,12 +1,11 @@
 package com.yue.servlet;
 
-import com.yue.Response;
 
 import javax.servlet.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class PrimitiveServlet implements Servlet {
+public class PrimitiveServlet implements Servlet{
 
     public void init(ServletConfig servletConfig) throws ServletException {
         System.out.println("init servlet");

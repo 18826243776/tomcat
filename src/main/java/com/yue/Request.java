@@ -17,6 +17,10 @@ public class Request {
         this.inputStream = inputStream;
     }
 
+    public static void main(String[] args) throws ClassNotFoundException {
+        Class<?> aClass = Class.forName("com.yue.HttpServer");
+        System.out.println(aClass);
+    }
 
     public String parseURI() {
         StringBuffer sb = new StringBuffer(8080);

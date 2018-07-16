@@ -5,7 +5,9 @@ package com.yue;
 //2.1 request解析客户的访问资源
 //3.构建response处理服务端的响应
 
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -14,6 +16,7 @@ public class HttpServer {
     public static String WEB_ROOT = "D:/ideaHome/tomcat/src/main/resources/static/";
 
     public static void main(String[] args) throws IOException {
+
         ServerSocket serverSocket = new ServerSocket(8080); // 创建一个服务端，监听端口8888
         while (true){
             Socket socket = serverSocket.accept(); // 等待客户端连接过来
