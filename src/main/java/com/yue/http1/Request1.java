@@ -33,6 +33,7 @@ public class Request1 implements ServletRequest{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println(sb.toString());
         String requestContent = sb.toString();
         int index1 = requestContent.indexOf(" ");
         if (index1 != -1) {
